@@ -1,4 +1,5 @@
 const { expect } = require("chai");
+const token = require("./token");
 let chai = require("chai");
 let chaiHttp = require("chai-http");
 
@@ -6,8 +7,7 @@ chai.should();
 chai.use(chaiHttp);
 let url = "https://simple-books-api.glitch.me";
 let authKey = "Authorization";
-let authValue =
-  "Bearer 7b3c2247ba3e523ef86afbf4332aae31e3d3effd3288f68b60ce51b31b30c873";
+let authValue = "token";
 
 describe("Orders tests", function () {
   //GET non-fiction-books
